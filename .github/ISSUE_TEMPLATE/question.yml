@@ -1,0 +1,39 @@
+name: ❓ Question / Help
+description: Ask a question about using Cerebro
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Quick check first — has your question been answered in:
+        - 📖 [User Guide](https://github.com/Professor-Low/Cerebro-Installer/blob/main/docs/USER_GUIDE.md)
+        - ❓ [FAQ](https://github.com/Professor-Low/Cerebro-Installer/blob/main/docs/FAQ.md)
+        - 🔧 [Troubleshooting](https://github.com/Professor-Low/Cerebro-Installer/blob/main/docs/TROUBLESHOOTING.md)
+        - 💬 [Discussions](https://github.com/Professor-Low/Cerebro-Installer/discussions)
+
+        If yes, please use those resources. If no, ask away!
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Cerebro Version
+      placeholder: e.g. v6.0.0-alpha.1
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Operating System
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS
+        - Linux
+        - Other / Not relevant

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 Read the User Guide
+    url: https://github.com/Professor-Low/Cerebro-Installer/blob/main/docs/USER_GUIDE.md
+    about: Most questions are answered here
+  - name: 🔒 Report a Security Vulnerability (private)
+    url: https://github.com/Professor-Low/Cerebro-Installer/security/advisories/new
+    about: Do NOT use public issues for security reports
+  - name: 💬 Discussions
+    url: https://github.com/Professor-Low/Cerebro-Installer/discussions
+    about: General Q&A and community chat
