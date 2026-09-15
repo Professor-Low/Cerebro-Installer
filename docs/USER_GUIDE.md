@@ -13,8 +13,41 @@ A walkthrough of Cerebro's core features and how to use them day-to-day.
    - **Windows:** Double-click `Cerebro-Installer.exe`. If SmartScreen warns about an unsigned publisher, click "More info" → "Run anyway" (we're working on code signing for v6.1).
    - **Linux (.AppImage):** `chmod +x Cerebro-Installer.AppImage` then double-click.
    - **Linux (.deb):** `sudo dpkg -i Cerebro-Installer.deb`
+   - **macOS (Apple Silicon):** See [macOS (Apple Silicon)](#macos-apple-silicon) below.
 3. Launch Cerebro from your Start Menu or Applications folder.
 4. The first launch will create your local data directory at `~/Cerebro/` (or platform equivalent).
+
+### macOS (Apple Silicon)
+
+Cerebro for macOS is distributed as an unsigned `.dmg`. macOS will block the first launch — this is expected. Follow these steps:
+
+1. Open the downloaded `Cerebro-Installer.dmg`.
+2. Drag **Cerebro** into your **Applications** folder, then eject the disk image.
+3. Open **Cerebro** from Applications or Launchpad.
+4. macOS will show a dialog along the lines of *"Apple could not verify 'Cerebro' is free of malware that may harm your Mac or compromise your privacy."* Click **Done** (or **Cancel**) to dismiss it — do not click Move to Trash.
+5. Open **System Settings → Privacy & Security** and scroll down to the **Security** section. You will see a message about Cerebro with an **Open Anyway** button. Click it.
+6. Confirm with your password or Touch ID when prompted.
+7. Launch Cerebro again from Applications — it will open normally.
+
+> **macOS 15 Sequoia and macOS 26 Tahoe:** the old shortcut of Control-clicking the app icon and choosing **Open** no longer bypasses Gatekeeper on these versions. Privacy & Security → Open Anyway is the only GUI route.
+
+**Terminal alternative:** If you prefer the command line, run this once after dragging the app in:
+```bash
+xattr -dr com.apple.quarantine /Applications/Cerebro.app
+```
+Then launch normally.
+
+This is a one-time step per install. If you download and install a newer `.dmg`, repeat it for the updated app.
+
+**Updates on macOS:** Auto-update is not available on macOS yet. When a new version is released, download the latest `.dmg` from the [Releases page](https://github.com/Professor-Low/Cerebro-Installer/releases/latest), drag the new app into Applications to replace the old one, and run the Gatekeeper step again.
+
+**Prerequisites:**
+- macOS 12 Monterey or later (Apple Silicon only; Intel Mac not supported yet)
+- 8 GB RAM minimum, 16 GB recommended
+- Google Chrome installed in `/Applications` (required for browser automation)
+- An active Claude Pro or Claude Max subscription
+
+The first-launch wizard will install Tailscale, Node.js, and Claude Code — it will ask for your password during this step, which is expected.
 
 ### Signing In
 

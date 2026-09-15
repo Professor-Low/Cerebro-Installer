@@ -4,6 +4,68 @@ Common issues and fixes.
 
 ---
 
+## macOS
+
+### Gatekeeper blocks launch — "Apple could not verify…"
+
+The `.dmg` is unsigned, so macOS quarantines it on first open. The fix is a one-time step:
+
+**Settings route (required on macOS 15 Sequoia and macOS 26 Tahoe):**
+1. After the Gatekeeper dialog appears, click **Done** or **Cancel** — do not click Move to Trash.
+2. Open **System Settings → Privacy & Security** and scroll to the **Security** section near the bottom.
+3. You will see a message about Cerebro and an **Open Anyway** button. Click it.
+4. Confirm with your password or Touch ID.
+5. Launch Cerebro again — it will open normally.
+
+> On macOS 15 Sequoia and macOS 26 Tahoe, the old Control-click → Open shortcut no longer bypasses Gatekeeper. The Privacy & Security route is the only GUI option.
+
+**Terminal route (any macOS version):**
+```bash
+xattr -dr com.apple.quarantine /Applications/Cerebro.app
+```
+Run this once after installation, then launch normally.
+
+Repeat this step each time you install an updated `.dmg`.
+
+---
+
+### "Cerebro is damaged and can't be opened. You should move it to the Trash."
+
+This is the same Gatekeeper quarantine, shown when the app was downloaded via a browser. Do **not** reinstall — the file is not damaged. Clear the quarantine attribute:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Cerebro.app
+```
+
+If you already moved the app to the Trash, drag it back to `/Applications` first, then run the command.
+
+---
+
+### Chrome not found on macOS
+
+Cerebro requires Google Chrome installed at `/Applications/Google Chrome.app`. Download it from [google.com/chrome](https://www.google.com/chrome/) and install normally.
+
+If Chrome is installed elsewhere, set the path manually: **Settings → File Access → Browser Path**.
+
+---
+
+### App opens but shows nothing / backend not starting
+
+1. Wait 15 seconds — the bundled backend binary takes a moment on first launch.
+2. Check **Settings → Connection** — confirm host is `127.0.0.1` and port is `59000`.
+3. Check logs in two places:
+   - `~/Library/Logs/Cerebro/` (macOS system logs)
+   - `~/.config/Cerebro/logs/` (app logs)
+4. Look for `Address already in use` in the logs — if present, a previous Cerebro process is still running. Quit it from the Dock and relaunch.
+
+---
+
+### First-launch wizard asks for a password when installing Tailscale, Node.js, or Claude Code
+
+This is expected. The first-launch wizard installs these components system-wide and needs administrator access to do so. Enter your Mac login password when prompted.
+
+---
+
 ## Installation
 
 ### Windows: "Windows protected your PC" SmartScreen warning

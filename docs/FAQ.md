@@ -39,13 +39,29 @@ Open a [feature request](https://github.com/Professor-Low/Cerebro-Installer/issu
 
 ### How do I uninstall?
 - **Windows:** Settings → Apps → Cerebro → Uninstall
+- **macOS:** Drag `Cerebro.app` from Applications to the Trash
 - **Linux (AppImage):** Just delete the `.AppImage` file
 - **Linux (.deb):** `sudo apt remove cerebro`
 
 To also remove your data, delete the data directory listed in [User Guide → Data Locations](USER_GUIDE.md#data-locations).
 
-### Will there be a macOS version?
-Yes — targeted for v6.1. Universal binary (Intel + Apple Silicon).
+### Why does macOS say Cerebro can't be verified / is damaged?
+Cerebro is not yet signed with an Apple Developer ID, so macOS Gatekeeper blocks the first launch. This is expected for unsigned apps downloaded from the internet. To open it:
+
+1. Go to **System Settings → Privacy & Security** and scroll to the **Security** section.
+2. Click **Open Anyway** next to the Cerebro message.
+3. Confirm with your password or Touch ID.
+
+Alternatively, run `xattr -dr com.apple.quarantine /Applications/Cerebro.app` in Terminal. This is a one-time step per install. See [User Guide → macOS (Apple Silicon)](USER_GUIDE.md#macos-apple-silicon) for the full walkthrough.
+
+### Does Cerebro auto-update on Mac?
+Not yet. Auto-update is disabled on macOS for now. When a new version is available, download the latest `.dmg` from the [Releases page](https://github.com/Professor-Low/Cerebro-Installer/releases/latest), drag the new app into Applications to replace the old one, and clear the quarantine flag again. Code signing and in-app auto-update for macOS are planned.
+
+### Is there an Intel Mac build?
+Not yet — the current macOS release is Apple Silicon (arm64) only. An Intel or universal build is not on the near-term roadmap.
+
+### Which macOS versions are supported?
+macOS 12 Monterey and later, Apple Silicon only. macOS 11 Big Sur and earlier are not supported.
 
 ### How do I report a security issue?
 **Privately.** See [SECURITY.md](../SECURITY.md). Do NOT open a public issue for security reports.
