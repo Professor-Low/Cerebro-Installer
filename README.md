@@ -1,134 +1,109 @@
 <div align="center">
+  <a href="https://cerebro.life">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/logo-on-dark.png">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/logo-on-light.png">
+      <img alt="Cerebro" src="./assets/logo-on-light.png" width="38%">
+    </picture>
+  </a>
 
-# 🧠 Cerebro
+  <h3>The AI operations platform that never forgets.</h3>
+  <sub>Persistent memory · Autonomous agents · Browser automation · Runs on your machine</sub>
 
-### A personal AI companion that remembers everything.
+  <br><br>
 
-**Persistent memory · Agent orchestration · Browser automation · Local-first**
+  <a href="https://github.com/Professor-Low/Cerebro-Installer/releases/latest"><img src="https://img.shields.io/github/v/release/Professor-Low/Cerebro-Installer?include_prereleases&style=for-the-badge&label=Release&color=6366F1" /></a>
+  <a href="https://cerebro.life"><img src="https://img.shields.io/badge/cerebro.life-000000?style=for-the-badge" /></a>
+  <a href="https://discord.gg/pTHdCFnXfz"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
 
-[![Latest Release](https://img.shields.io/github/v/release/Professor-Low/Cerebro-Installer?include_prereleases&style=for-the-badge&color=indigo)](https://github.com/Professor-Low/Cerebro-Installer/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/Professor-Low/Cerebro-Installer/total?style=for-the-badge&color=emerald)](https://github.com/Professor-Low/Cerebro-Installer/releases)
-[![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE.md)
-
-[**⬇️ Download Latest**](https://github.com/Professor-Low/Cerebro-Installer/releases/latest) ·
-[**📖 User Guide**](docs/USER_GUIDE.md) ·
-[**🗺️ Roadmap**](ROADMAP.md) ·
-[**💬 Report a Bug**](https://github.com/Professor-Low/Cerebro-Installer/issues/new/choose)
-
+  <p>
+    <a href="https://github.com/Professor-Low/Cerebro-Installer/releases/latest"><b>Download</b></a> ·
+    <a href="docs/USER_GUIDE.md">User Guide</a> ·
+    <a href="CHANGELOG.md">Changelog</a> ·
+    <a href="ROADMAP.md">Roadmap</a> ·
+    <a href="https://github.com/Professor-Low/Cerebro-Installer/issues/new/choose">Report a bug</a>
+  </p>
 </div>
 
 ---
 
 ## What is Cerebro?
 
-Cerebro is a desktop AI companion that **remembers every conversation you've had**, learns from your corrections, and gets sharper over time. Unlike chatbots that forget the moment you close the tab, Cerebro maintains a persistent, searchable memory of every project, decision, and detail you share with it.
+Cerebro is a desktop AI platform that **remembers every conversation**, learns from your corrections, and gets sharper over time. Your projects, decisions and preferences persist across sessions and are shared by every agent it runs.
 
-It can also **deploy specialized agents** to work on tasks in parallel, **drive a real Chrome browser** to fill forms and scrape pages, and **connect to your local AI models** (Ollama, LM Studio, llama.cpp) — all from one unified desktop app.
+It **deploys specialized agents** that work in parallel, **drives a real Chrome browser** to fill forms, read pages and take screenshots, and runs on **Claude, Codex or your own local models**, all from one app. It uses the Claude or ChatGPT subscription you already pay for. No API keys.
 
-> **Why Cerebro is different:** Most AI assistants are stateless rentals. Cerebro is a teammate that remembers you.
-
----
-
-## ✨ Features
+## Features
 
 | | |
 |---|---|
-| 🧠 **Persistent Memory** | Every conversation, learning, and correction is indexed and recallable across sessions. Powered by FAISS vector search. |
-| 🤖 **Agent Orchestration** | Spawn workers, researchers, coders, analysts in parallel. Each agent has a specific role and reports back. |
-| 🌐 **Browser Control** | Drive a real Chrome instance for form-filling, scraping, screenshots, and complex automations. |
-| 🔌 **Bring Your Own Model** | Optional local model support via OpenAI-compatible endpoints. Plug in Ollama, LM Studio, vLLM — Cerebro speaks all of them. |
-| 🖥️ **Native Desktop App** | No Docker, no terminal, no setup wizards. Download → install → launch. Tray icon. System integration. |
-| 🔒 **Local-First** | Your memory and data live on your machine. No third-party telemetry on your conversations. |
-| ⚡ **System Tray** | Cerebro lives in your tray and is always one click away. |
-| 🎙️ **Voice Input** | Optional voice transcription for hands-free interaction. |
+| **Persistent memory** | Conversations, learnings and corrections are indexed with FAISS vector search and recalled across sessions. |
+| **Agent orchestration** | Spawn workers, researchers, coders and analysts in parallel. Each has a defined role and reports back. |
+| **Browser control** | Drives a real Chrome instance for forms, scraping, screenshots and multi-step automations. |
+| **Claude, Codex or local** | Runs on Claude Code or Codex through your own subscription login, or on local models through any OpenAI-compatible server (Ollama, LM Studio, llama.cpp, vLLM). |
+| **Native desktop app** | No Docker and no terminal. Download, install, launch. A setup wizard installs the prerequisites for you. |
+| **Runs on your machine** | Memory and data live locally in `~/.cerebro/`. No telemetry on your conversations. |
+| **Auto-updates** | Windows, Linux and macOS update in place when a new release ships. |
+| **Voice input** | Optional voice transcription for hands-free use. |
 
----
+## Download
 
-## ⬇️ Download
-
-| Platform | Installer | Notes |
+| Platform | File | Install |
 |---|---|---|
-| 🪟 **Windows 10/11 (x64)** | [`Cerebro-Installer.exe`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest) | Run installer, follow prompts |
-| 🐧 **Linux (x64)** | [`Cerebro-Installer.AppImage`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest) | `chmod +x` and double-click |
-| 🐧 **Debian/Ubuntu** | [`Cerebro-Installer.deb`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest) | `sudo dpkg -i Cerebro-Installer.deb` |
-| 🍎 **macOS** | _Coming soon_ | Targeted for v6.1 |
+| **Windows 10/11** (x64) | [`Cerebro-Installer.exe`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest/download/Cerebro-Installer.exe) | Run it and follow the prompts |
+| **macOS** (Apple Silicon) | [`Cerebro-Installer.dmg`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest/download/Cerebro-Installer.dmg) | Drag Cerebro to Applications. First launch needs one approval, see [macOS setup](docs/USER_GUIDE.md#macos-apple-silicon) |
+| **Linux** (x64) | [`Cerebro-Installer.AppImage`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest/download/Cerebro-Installer.AppImage) | `chmod +x`, then run |
+| **Debian / Ubuntu** | [`Cerebro-Installer.deb`](https://github.com/Professor-Low/Cerebro-Installer/releases/latest/download/Cerebro-Installer.deb) | `sudo apt install ./Cerebro-Installer.deb` |
 
-> All installers auto-update through GitHub releases. You'll be notified inside the app when a new version drops.
+Optional connectors (WhatsApp, Phone Link) are attached to each [release](https://github.com/Professor-Low/Cerebro-Installer/releases/latest).
 
----
+## Requirements
 
-## 🛠️ System Requirements
+- Windows 10/11 x64, macOS on Apple Silicon, or Ubuntu 20.04+ / compatible Linux
+- 8 GB RAM minimum, 16 GB recommended
+- 2 GB free disk space, SSD recommended
+- A Claude subscription (for Claude Code) or a ChatGPT subscription (for Codex), or a local model server
+- Google Chrome for browser automation (auto-detected)
+- A Cerebro license key or access code, from [cerebro.life](https://cerebro.life)
 
-**Minimum**
-- Windows 10/11 x64, Ubuntu 20.04+, or compatible Linux
-- 8 GB RAM
-- 2 GB free disk space
-- Active internet connection (for cloud AI calls)
+## Quick start
 
-**Recommended**
-- 16 GB RAM (smoother agent orchestration)
-- SSD (faster memory indexing)
-- Google Chrome installed (auto-detected for browser automation)
+1. **Download** the installer for your platform above.
+2. **Install** and launch Cerebro.
+3. **Activate** with your license key or access code.
+4. **Let the setup wizard** install prerequisites and sign you in to Claude Code.
+5. **Start a conversation.** Cerebro starts remembering immediately.
 
-**Optional**
-- Local model server (Ollama, LM Studio, llama.cpp, vLLM) — for BYO-Model mode
+Full walkthrough in the [User Guide](docs/USER_GUIDE.md).
 
----
+## Documentation
 
-## 🚀 Quick Start
+- [User Guide](docs/USER_GUIDE.md): setup, core features, day-to-day use
+- [FAQ](docs/FAQ.md)
+- [Troubleshooting](docs/TROUBLESHOOTING.md)
+- [Local models](docs/BYO_MODEL.md): connect Ollama, LM Studio and other servers
+- [Privacy](docs/PRIVACY.md): what Cerebro stores and where
+- [Changelog](CHANGELOG.md) · [Roadmap](ROADMAP.md)
 
-1. **Download** the installer for your platform from [Releases](https://github.com/Professor-Low/Cerebro-Installer/releases/latest)
-2. **Install** — double-click and follow the prompts
-3. **Launch** Cerebro from your Start Menu / Applications folder
-4. **Sign in** with your Claude account when prompted
-5. **Start a conversation** — Cerebro will start remembering immediately
+## Privacy and security
 
-For detailed setup, see the [**User Guide**](docs/USER_GUIDE.md).
+- Memory, conversation history and settings live on your machine in `~/.cerebro/`.
+- AI requests go straight from your machine to the provider you choose, using your own login: Anthropic for Claude, OpenAI for Codex, or your local model server.
+- Cerebro contacts cerebro.life to validate your license, and GitHub to check for updates.
+- No third-party analytics and no tracking of your conversations.
 
----
+Report vulnerabilities through [SECURITY.md](SECURITY.md). Full policy: [docs/PRIVACY.md](docs/PRIVACY.md).
 
-## 📚 Documentation
+## Community and support
 
-- [**User Guide**](docs/USER_GUIDE.md) — getting started, core features, day-to-day usage
-- [**FAQ**](docs/FAQ.md) — common questions
-- [**Troubleshooting**](docs/TROUBLESHOOTING.md) — fixes for common issues
-- [**BYO-Model Setup**](docs/BYO_MODEL.md) — connect your local LLM
-- [**Privacy Policy**](docs/PRIVACY.md) — what data Cerebro stores and where
-- [**Changelog**](CHANGELOG.md) — what's new in each release
-- [**Roadmap**](ROADMAP.md) — what's coming next
+- **Discord:** [discord.gg/pTHdCFnXfz](https://discord.gg/pTHdCFnXfz)
+- **Bugs and feature requests:** [GitHub Issues](https://github.com/Professor-Low/Cerebro-Installer/issues/new/choose)
+- **Security:** [SECURITY.md](SECURITY.md)
 
----
+## License
 
-## 🔐 Privacy & Security
-
-Cerebro is **local-first by design**:
-- Your conversation history and memory live on your machine in `~/Cerebro/` (or platform equivalent)
-- Cloud AI calls go directly to Anthropic using your own Claude account credentials
-- No third-party analytics, no telemetry beacons, no usage tracking on your conversations
-- Optional crash reporting (off by default) sends only anonymized error stacks
-
-See [SECURITY.md](SECURITY.md) for vulnerability reporting and [docs/PRIVACY.md](docs/PRIVACY.md) for the full privacy policy.
-
----
-
-## 💬 Community & Support
-
-- **Bug reports / feature requests:** [GitHub Issues](https://github.com/Professor-Low/Cerebro-Installer/issues/new/choose)
-- **Security disclosures:** see [SECURITY.md](SECURITY.md)
-- **General questions:** [Discussions](https://github.com/Professor-Low/Cerebro-Installer/discussions)
-
----
-
-## 📄 License
-
-Cerebro is **proprietary commercial software**. The installer is free to download and use for personal and evaluation purposes, but the source code is **closed and not available for redistribution, modification, or reverse-engineering**.
-
-See [LICENSE.md](LICENSE.md) for the complete End User License Agreement.
-
----
+Cerebro is proprietary software. The source code is closed and may not be redistributed, modified or reverse-engineered. See [LICENSE.md](LICENSE.md) for the full End User License Agreement.
 
 <div align="center">
-
-**Built by [Professor Low](https://github.com/Professor-Low)** · © 2026 All Rights Reserved
-
+  <sub>© 2026 Cerebro · <a href="https://cerebro.life">cerebro.life</a></sub>
 </div>
